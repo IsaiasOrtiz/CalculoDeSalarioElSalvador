@@ -1,0 +1,64 @@
+<!--AUTOR: Douglas Valle 05-07-2021-->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+        <link rel="shortcut icon" href="./src/img/logo.png" />
+        <script src="./src/js/calculo.js"></script>
+        <title>Salario - El Salvador</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Calculadora de salario</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="col-form-label mt-4" for="idSalario">Ingresa tu salario:</label>
+                        <input type="number" value="300" class="form-control" placeholder="Salario" id="idSalario" required>
+                        <div id="idError" class="alert alert-dismissible alert-warning" style="display: none;">
+                            <button id="btnCerrar" type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            <h4 class="alert-heading">Advertencia!</h4>
+                            <p class="mb-0">No se admiten letras!</p>
+                          </div>                   
+                      </div>
+
+                      <div id="idCalculoFinal" class="col-md-12 p-2">
+                        <div class="card border-primary">
+                            <div class="card-header">Calculo de salario:</div>
+                            <div class="card-body">
+                              <h4 class="card-title">Salario con descuentos: </h4>
+                              <p class="card-text"><strong>ISSS:</strong> <label id="idIsss"></label></p>
+                              <p class="card-text"><strong>AFP:</strong> <label id="idAfp"></label></p>
+                              <p class="card-text"><strong>Renta:</strong> <label id="idRenta"></label></p>
+                              <p class="card-text"><strong>Salario neto mensual:</strong> <label id="idSalarioMes"></label></p>
+                              <p class="card-text"><strong>Salario neto quincenal:</strong> <label id="idSalario15"></label></p>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div class="d-grid gap-2 p-2">            
+                        <button id="idCalcular" class="btn btn-lg btn-primary" data-bs-toggle="modal" type="button">Calcular</button>
+                      </div>
+
+                      
+                </div>
+            </div>
+    
+        </div>
+        <footer>
+            <div class="card-footer text-muted">
+              <div class="justify-content-between align-items-center">
+                  Desarrollado : Isaias Ortiz 2021
+              </div>
+            </div>
+        </footer>
+        <script src="./src/js/funciones.js"></script>
+    </body>
+</html>
